@@ -8,7 +8,7 @@ const app: Express = express();
 const PORT = process.env.PORT || 5500;
 
 app.get('/', (_, res: Response) => {
-  res.status(200).json({ message: 'succes' });
+  res.status(200).json({ message: 'Hello, world!' });
 });
 
 app.listen(PORT, () => {
