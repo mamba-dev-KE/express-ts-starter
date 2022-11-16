@@ -1,4 +1,4 @@
-import express, { Express } from 'express';
+import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -6,7 +6,7 @@ dotenv.config();
 const app: Express = express();
 const PORT = process.env.PORT || 5500;
 
-app.get('/', (req, res) => {
+app.get('/', (_, res: Response) => {
   res.status(200).json({ message: 'succes' });
 });
 
