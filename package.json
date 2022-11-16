@@ -16,6 +16,7 @@
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
@@ -28,6 +29,13 @@
     "start": "yarn build && node build/index.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
+    "prettier:format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "format": "yarn lint:fix && yarn prettier:format"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format",
+      "pre-push": ""
+    }
   }
 }
