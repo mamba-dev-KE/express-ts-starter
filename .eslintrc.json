@@ -6,7 +6,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended"
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@shopify/es5"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -16,6 +17,8 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "no-console": 1
+    "no-console": 0,
+    "no-process-env": 0,
+    "object-curly-spacing": 0
   }
 }

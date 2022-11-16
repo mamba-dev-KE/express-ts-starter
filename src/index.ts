@@ -1,9 +1,10 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express, Response } from 'express';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 const app: Express = express();
+// eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 5500;
 
 app.get('/', (_, res: Response) => {
