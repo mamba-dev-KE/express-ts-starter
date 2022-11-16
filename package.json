@@ -22,6 +22,7 @@
     "dev": "nodemon",
     "build": "rimraf ./build && tsc",
     "start": "yarn build && node build/index.js",
-    "lint": "eslint src/**/*.{ts}"
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
   }
 }
