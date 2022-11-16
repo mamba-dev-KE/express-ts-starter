@@ -34,10 +34,6 @@
     "format": "yarn lint:fix && yarn prettier:format",
     "postinstall": "husky install",
     "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format"
-    }
   }
+ 
 }
