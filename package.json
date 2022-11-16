@@ -16,7 +16,7 @@
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.2",
+    "husky": "^8.0.0",
     "nodemon": "^2.0.20",
     "pinst": "^3.0.0",
     "prettier": "^2.7.1",
@@ -31,7 +31,9 @@
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "prettier:format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "format": "yarn lint:fix && yarn prettier:format"
+    "format": "yarn lint:fix && yarn prettier:format",
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
